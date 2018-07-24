@@ -1,8 +1,8 @@
 package ctrd
 
 import (
-	"testing"
 	"os"
+	"testing"
 )
 
 func TestHasPort(t *testing.T) {
@@ -69,13 +69,12 @@ func TestUseProxy(t *testing.T) {
 		{name: "matchEnv3", args: args{str: string("bar.foo.com:8080")}, want: false},
 		{name: "notMatchEnv", args: args{str: string("www.alibaba.com:8080")}, want: true},
 		{name: "allFalseEnv", args: args{str: string("localhost:8080")}, want: false},
-
 	}
-	env := []struct{
+	env := []struct {
 		name string
-		val string
+		val  string
 	}{
-		//The environment variable for testCast	
+		//The environment variable for testCast
 		{name: "NO_PROXY", val: ".foo.com"},
 		{name: "NO_PROXY", val: ".foo.com"},
 		{name: "NO_PROXY", val: ".foo.com"},
